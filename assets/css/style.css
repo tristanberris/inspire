@@ -1,0 +1,88 @@
+body, html{
+  height: 100%;
+}
+*{
+  margin: 0%;
+  color: white;
+}
+#todo-error{
+  color: red;
+  font-size: 2em;
+}
+
+#bg-image{
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.rectangle{
+  width: 25.5%;
+  height: 100%;
+  background: black;
+  position: fixed;
+  z-index: -1;
+  opacity: 60%;
+  
+}
+
+.fixed-row-bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+.weather.temp{
+ 
+  font-size: 7rem;
+
+}
+.weather.town{
+
+font-size: 2rem;
+}
+
+.weather-line{
+  
+  border-bottom: 5px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: solid;
+  border-color: white;
+  width: 25.9%;
+  opacity: 80%;
+}
+
+.quote-row{
+
+  position: fixed;
+  width: 100%;
+  bottom: 30%
+
+}
+
+#quote{
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+#clock{
+  margin-left: 11%;
+  font-family: Tahoma;
+  font-size: 19px;
+  opacity: 60%; 
+}
+
+.quote-shape{
+  width: auto;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  opacity: 70%;
+
+}

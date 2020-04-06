@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inspire</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="container-fluid " id="bg-image">
+    <div class="rectangle"></div>
+    <div id="weather" class="weather-line rowmb-3 pt-4 pb-4">
+      Your Weather Template
+    </div>
+<!-- clock area -->
+    <script>
+		function startTime() {
+		  var today = new Date();
+		  var h = today.getHours();
+		  var m = today.getMinutes();
+		  var s = today.getSeconds();
+		  m = checkTime(m);
+		  s = checkTime(s);
+		  document.getElementById('txt').innerHTML =
+		  h + ":" + m + ":" + s;
+		  var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		  return i;
+		}
+		</script>
+		
+		
+		<body onload="startTime()">
+		
+		<div id="txt"></div>
+		<!-- clock area end -->
+
+    <div class="row justify-content-center quote-row">
+		<div id="quote" class="col-3 quote-shape p-4">The Quote </div>
+		  
+    </div>
+
+    <div class="row  fixed-row-bottom mb-5 ml-1">
+      <div class="col-3 ">
+        <h5 class="text-center">Your daily list</h5>
+        <div id="todo-error"></div>
+
+        <form onsubmit="app.todoController.addTodo(event)">
+          <input
+            type="text"
+            class="form-control"
+            name="query"
+            placeholder="Add task!"
+            required
+          />
+          <button class="btn btn-dark mt-1 form-control" type="submit">
+            Add task...
+          </button>
+        </form>
+
+        <h1>Tasks:</h1>
+        <div id="todos"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script type="module" src="app/main.js"></script>
+  </body>
+  <!-- use gregslist as a reference for making the to-do list calls and stuff -->
+</html>
+<html></html>

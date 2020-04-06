@@ -20,16 +20,16 @@
       Your Weather Template
     </div>
 <!-- clock area -->
-    <script>
+    <script >
 		function startTime() {
 		  var today = new Date();
 		  var h = today.getHours();
 		  var m = today.getMinutes();
-		  var s = today.getSeconds();
+		  // var s = today.getSeconds();
 		  m = checkTime(m);
-		  s = checkTime(s);
+		  // s = checkTime(s);
 		  document.getElementById('txt').innerHTML =
-		  h + ":" + m + ":" + s;
+		  (h - 12) + ":" + m ;
 		  var t = setTimeout(startTime, 500);
 		}
 		function checkTime(i) {
@@ -37,11 +37,8 @@
 		  return i;
 		}
 		</script>
-		
-		
 		<body onload="startTime()">
-		
-		<div id="txt"></div>
+		<div id="txt" class="clock"></div>
 		<!-- clock area end -->
 
     <div class="row justify-content-center quote-row">

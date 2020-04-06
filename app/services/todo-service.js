@@ -13,11 +13,22 @@ class TodoService {
     todoApi.get()
     .then(res => {
       let list = res.data.data.map(rawListData => new List(rawListData))
+      let numC = res.data.data.length
+      console.log(numC)
       store.commit("todos", list)
+      // store.commit("todoNum", list)
       // console.log(store.State.todos)
     })
     .catch(err => console.error(err))
     //TODO Handle this response from the server
+    // let numCalc = store.State.todos
+    // console.log(numCalc.length)
+  }
+
+  todoNum(){
+    // let num = store.State.todos.length()
+    // console.log(num)
+    // return num;
   }
 
   addTodoAsync(todo) {

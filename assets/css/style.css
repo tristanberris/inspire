@@ -61,7 +61,7 @@ font-size: 2rem;
 
   position: fixed;
   width: 100%;
-  bottom: 30%
+  bottom: 40%
 
 }
 
@@ -72,10 +72,10 @@ font-size: 2rem;
 }
 
 #clock{
-  margin-left: 11%;
+  /* margin-left: 11%;
   font-family: Tahoma;
   font-size: 19px;
-  opacity: 60%; 
+  opacity: 60%;  */
 }
 
 .quote-shape{
@@ -85,4 +85,19 @@ font-size: 2rem;
   z-index: -1;
   opacity: 70%;
 
+}
+
+.clock{
+  position: fixed;
+  width: 180%;
+  top: 80%;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+  opacity: 80%;
+  font-size: 7rem;
+  font-weight: bold;
+  color: white;
+  /* -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white; */
+  
 }

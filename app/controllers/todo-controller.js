@@ -42,4 +42,7 @@ export default class TodoController {
   removeTodo(todoId) {
     TodoService.removeTodoAsync(todoId);
   }
+  calcNum(){
+    TodoService.todoNum();
+  }
 }

@@ -14,6 +14,7 @@ class TodoService {
     .then(res => {
       let list = res.data.data.map(rawListData => new List(rawListData))
       let numC = res.data.data.length
+      document.getElementById("todoNum").innerHTML = numC;
       console.log(numC)
       store.commit("todos", list)
       // store.commit("todoNum", list)
